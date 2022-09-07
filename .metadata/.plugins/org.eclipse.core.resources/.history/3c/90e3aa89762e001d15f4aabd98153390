@@ -1,0 +1,12 @@
+package polymorphism;
+
+public class BeanFactory {
+
+	public Object getBean(String beanName) {
+		
+		if(beanName.equals("»ï¼ºÆ¼ºñ")) {
+			return new SamsungTV();
+		}
+	}
+	
+}
