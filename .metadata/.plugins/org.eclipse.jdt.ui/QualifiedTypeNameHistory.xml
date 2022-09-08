@@ -4,4 +4,14 @@
 <fullyQualifiedTypeName name="polymorphism.LgTV"/>
 <fullyQualifiedTypeName name="polymorphism.TVUser"/>
 <fullyQualifiedTypeName name="polymorphism.BeanFactory"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+<fullyQualifiedTypeName name="com.sun.scenario.effect.impl.sw.sse.SSEBlend_ADDPeer"/>
+<fullyQualifiedTypeName name="polymorphism.SonySpeaker"/>
+<fullyQualifiedTypeName name="polymorphism.Speaker"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
+<fullyQualifiedTypeName name="com.global.ioc.injection.CollectionBean"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
 </qualifiedTypeNameHistroy>

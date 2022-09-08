@@ -1,0 +1,5 @@
+package com.global.ioc.injection;
+
+public class CollectionBean {
+
+}
