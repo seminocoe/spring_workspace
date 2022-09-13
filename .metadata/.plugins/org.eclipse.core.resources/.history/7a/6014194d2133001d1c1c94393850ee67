@@ -1,0 +1,20 @@
+package com.global.biz.common;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class JDBCUtil {
+
+	public static Connection getConnection() {
+		
+		tyr{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			return DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:orcl",
+					"scott", "tiger");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+			return null;
+	}
+	
+}

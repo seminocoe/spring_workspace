@@ -1,0 +1,5 @@
+package com.global.biz.board.impl;
+
+public class BoardDAO {
+
+}

@@ -1,0 +1,5 @@
+package com.global.biz.board;
+
+public class BoardVO {
+
+}
