@@ -34,11 +34,33 @@
 		</dependency>
 				
 		<!-- AspectJ -->
+		<!--
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
-		</dependency>	
+		</dependency>
+		-->
+		
+		<!-- 위에건 오토로 잡아주는거 밑에건 우리가 추가한 건데 버전 지정해 주는 것 -->
+		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
+		
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjrt</artifactId>
+		    <version>1.8.9</version>
+		    <scope>runtime</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		    <version>1.8.9</version>
+		    <scope>runtime</scope>
+		</dependency>
+		
+		
 		
 		<!-- Logging -->
 		<dependency>
