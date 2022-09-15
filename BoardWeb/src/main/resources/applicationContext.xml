@@ -9,18 +9,46 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
 	
 	<context:component-scan base-package="com.global.biz"></context:component-scan>
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 	
+	<!-- 
 	<bean id="log" class="com.global.biz.common.Log4jAdvice"></bean>
+	<bean id="before" class="com.global.biz.common.BeforeAdvice"></bean>
+	<bean id="afterReturning" class="com.global.biz.common.AfterReturningAdvice"></bean>
+	<bean id="afterThrowing" class="com.global.biz.common.AfterThrowingAdvice"></bean>
+	<bean id="after" class="com.global.biz.common.AfterAdvice"></bean>
+	<bean id="around" class="com.global.biz.common.AroundAdvice"></bean>
+	
 	<aop:config>
 		<aop:pointcut expression="execution(* com.global.biz..*Impl.get*(..))" id="getPointcut"/>
 		<aop:pointcut expression="execution(* com.global.biz..*Impl.*(..))" id="allPointcut"/>
 		
+		<aop:aspect ref="around">
+			<aop:around method="aroundLog" pointcut-ref="allPointcut"/>
+		</aop:aspect>
+		
+		<aop:aspect ref="afterThrowing">
+			<aop:after-throwing method="execeptionLog" throwing="exceptionObj" pointcut-ref="allPointcut"/>
+		</aop:aspect>
+		
+		<aop:aspect ref="after">
+			<aop:after method="finallyLog" pointcut-ref="allPointcut"/>
+		</aop:aspect>
+		
+		<aop:aspect ref="before">
+			<aop:before method="beforeLog" pointcut-ref="allPointcut"/>
+		</aop:aspect>
+
+		<aop:aspect ref="afterReturning">
+			<aop:after-returning method="afterLog" returning="returnObj" pointcut-ref="getPointcut"/>
+		</aop:aspect>
+		 -->
+	<!-- 
 		<aop:aspect ref="log">
 			<aop:before method="printLogging" pointcut-ref="getPointcut"/>
-			
 		</aop:aspect>
 	</aop:config>
-	
+	 -->
 	
 	
 	

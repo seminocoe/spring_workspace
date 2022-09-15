@@ -49,7 +49,6 @@
 		    <groupId>org.aspectj</groupId>
 		    <artifactId>aspectjrt</artifactId>
 		    <version>1.8.9</version>
-		    <scope>runtime</scope>
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
@@ -57,7 +56,6 @@
 		    <groupId>org.aspectj</groupId>
 		    <artifactId>aspectjweaver</artifactId>
 		    <version>1.8.9</version>
-		    <scope>runtime</scope>
 		</dependency>
 		
 		

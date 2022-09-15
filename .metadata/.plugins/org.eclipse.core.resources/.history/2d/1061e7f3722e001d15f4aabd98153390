@@ -1,9 +1,0 @@
-package polymorphism;
-
-public class SamsungTV {
-
-	public void powerOn(){
-		System.out.println("»ï¼ºÆ¼ºñ ------ Àü¿ø ÄÒ´Ù.");
-	}
-	
-}

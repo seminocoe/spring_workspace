@@ -5,7 +5,21 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-09-13T07:00:00Z</updated>
+  <updated>2022-09-15T02:00:00Z</updated>
+  <entry>
+    <title>Spring Cloud Dataflow 2.9.6 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/09/14/spring-cloud-dataflow-2-9-6-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Chris Bono</name>
+    </author>
+    <id>tag:spring.io,2022-09-14:4904</id>
+    <updated>2022-09-15T02:00:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I¡¯m happy to announce that Spring Cloud Dataflow &lt;code&gt;2.9.6&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
+&lt;p&gt;This release updates to Postgres SQL driver &lt;code&gt;42.2.26&lt;/code&gt; to address &lt;a href="https://github.com/advisories/GHSA-r38f-c4h4-hqq2"&gt;CVE-2022-31197&lt;/a&gt;. See the &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/releases/tag/v2.9.6"&gt;release notes&lt;/a&gt; for more information.&lt;/p&gt;&lt;h2&gt;&lt;a href="#stay-in-touch-hellip" class="anchor" name="stay-in-touch-hellip"&gt;&lt;/a&gt;Stay in touch&amp;hellip;&lt;/h2&gt;
+&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - September 13th, 2022</title>
     <link rel="alternate" href="https://spring.io/blog/2022/09/13/this-week-in-spring-september-13th-2022" />
@@ -896,46 +910,6 @@ class RequestHashingGatewayFilterFactoryTest {&#xD;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-security/reference/"&gt;Reference&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Introducing Experimental Spring Support for Apache Pulsar</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/08/16/introducing-experimental-spring-support-for-apache-pulsar" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Soby Chacko</name>
-    </author>
-    <id>tag:spring.io,2022-08-16:4881</id>
-    <updated>2022-08-16T14:00:00Z</updated>
-    <content type="html">&lt;p&gt;We are happy to announce that we are incubating a new &lt;a href="https://github.com/spring-projects-experimental/spring-pulsar"&gt;experimental Spring project&lt;/a&gt; for Apache Pulsar. This project aims to provide Spring-friendly APIs, building blocks, and programming models for writing Java applications that interact with Apache Pulsar. &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://pulsar.apache.org/"&gt;Apache Pulsar&lt;/a&gt; is a popular messaging system with a growing ecosystem of developers in the enterprise messaging and streaming space. Here are some main features and advantages of using Apache Pulsar for messaging-based software applications:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Apache Pulsar provides both the traditional queuing semantics of RabbitMQ, ActiveMQ, and others and the log-based structure of Apache Kafka through various subscription models.&lt;/li&gt;
-  &lt;li&gt;The broker in Apache Pulsar is stateless, and the storage is not part of the broker. Instead, it uses another Apache project called Bookkeeper to separate the storage layer from the broker. Because of this fundamental design, scaling up Apache Pulsar brokers is easy.&lt;/li&gt;
-  &lt;li&gt;Apache Pulsar uses distributed logs, called ledgers, leveraged through Bookkeeper. These ledgers distribute across multiple nodes of Bookkeeper.&lt;/li&gt;
-  &lt;li&gt;Another advantage of separating the storage layer (ledgers) from the serving layer (brokers) is that they can scale separately.&lt;/li&gt;
-  &lt;li&gt;Topic partitioning is a feature, not a requirement. You only need to use partitioning if the use case demands it.&lt;/li&gt;
-  &lt;li&gt;Built-in geo-replication mechanisms.&lt;/li&gt;
-  &lt;li&gt;Built-in multi-tenancy capabilities.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Historically, Spring has provided comprehensive support for popular JVM-based messaging systems. &lt;a href="https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#jms"&gt;JMS&lt;/a&gt; support is part of the core Spring Framework. Spring offers extensive support for AMQP and Kafka through their relevant counterparts in the Spring ecosystem - &lt;a href="https://spring.io/projects/spring-amqp"&gt;Spring AMQP&lt;/a&gt; and &lt;a href="https://spring.io/projects/spring-kafka"&gt;Spring for Apache Kafka&lt;/a&gt;. In addition, various messaging-related support is available in popular Spring projects such as &lt;a href="https://spring.io/projects/spring-integration"&gt;Spring Integration&lt;/a&gt; and &lt;a href="https://spring.io/projects/spring-cloud-stream"&gt;Spring Cloud Stream&lt;/a&gt;. Since Apache Pulsar is growing as a messaging broker, we started experimenting with a new Spring project dedicated to it by using the &lt;a href="https://pulsar.apache.org/docs/client-libraries-java/"&gt;Java client&lt;/a&gt; for Apache Pulsar.&lt;/p&gt;
-&lt;p&gt;From an application developer¡¯s standpoint, Apache Pulsar offers many of the same features that Apache Kafka provides, such as creating a producer to publish, a consumer to consume, and so on. Therefore, in the experimental Spring for Apache Pulsar, we model the design based on the fundamental design principles in Spring for Apache Kafka. You may notice many similarities in Spring for Apache Pulsar if you are familiar with the APIs of Spring for Apache Kafka. With this in mind, here are some current themes and features of Spring for Apache Pulsar:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;PulsarTemplate&lt;/code&gt; for quickly publishing to Pulsar topics using one-liner send methods.&lt;/li&gt;
-  &lt;li&gt;Provide a &lt;code&gt;PulsarListener&lt;/code&gt; annotation to write high-level Pulsar consumers.&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;MessageListenerContainer&lt;/code&gt; infrastructure to support PulsarListener.&lt;/li&gt;
-  &lt;li&gt;Both record and batch-based &lt;code&gt;PulsarListener&lt;/code&gt; consumption.&lt;/li&gt;
-  &lt;li&gt;Pulsar Producer and Consumer factories&lt;/li&gt;
-  &lt;li&gt;Automatic message acknowledgment by the framework.&lt;/li&gt;
-  &lt;li&gt;Various acknowledgment modes (for example, &lt;strong&gt;MANUAL&lt;/strong&gt;, &lt;strong&gt;RECORD&lt;/strong&gt;, &lt;strong&gt;BATCH&lt;/strong&gt;, and others).&lt;/li&gt;
-  &lt;li&gt;Spring Boot auto-configuration components.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This list of features is not exhaustive by any means, but we hope this list is a good starting point. &lt;/p&gt;
-&lt;p&gt;As we are still on the ground floor of this initiative, we would greatly appreciate any feedback.&lt;br/&gt;Especially if you are a Spring user writing Apache Pulsar-based applications, we would love to hear about your experience using this library.&lt;/p&gt;
-&lt;p&gt;We are planning to add more features and capabilities to this framework soon. We welcome any collaboration from the community in the form of bug reports, feature requests, pull requests, and other types of feedback. &lt;/p&gt;&lt;h2&gt;&lt;a href="#spring-for-apache-pulsar-resources" class="anchor" name="spring-for-apache-pulsar-resources"&gt;&lt;/a&gt;Spring for Apache Pulsar Resources&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://github.com/spring-projects-experimental/spring-pulsar"&gt;Spring for Apache Pulsar GitHub repository&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.spring.io/spring-pulsar/docs/current-SNAPSHOT/reference/html/"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/spring-projects-experimental/spring-pulsar/tree/main/spring-pulsar-sample-apps"&gt;Sample Applications&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
