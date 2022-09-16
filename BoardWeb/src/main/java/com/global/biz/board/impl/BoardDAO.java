@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.global.biz.board.BoardVO;
 import com.global.biz.common.JDBCUtil;
 
-@Repository
+//@Repository
 public class BoardDAO {
 
 	//JDBC관련 변수
