@@ -3,4 +3,5 @@
 <typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;polymorphism{Speaker.java[Speaker" modifiers="513" timestamp="1662622534863"/>
 <typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.global.biz.board{BoardService.java[BoardService" modifiers="513" timestamp="1663048768542"/>
 <typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.global.biz.user{UserService.java[UserService" modifiers="513" timestamp="1663116982726"/>
+<typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.global.view.controller{Controller.java[Controller" modifiers="513" timestamp="1663648969238"/>
 </typeInfoHistroy>

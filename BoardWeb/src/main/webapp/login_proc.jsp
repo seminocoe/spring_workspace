@@ -4,6 +4,7 @@
 <%@ page import="com.global.biz.user.UserVO" %>
 <%@ page import="com.global.biz.user.impl.UserDAO" %>
 
+<!-- 여기 파일을 디스패쳐로 옮겨서 삭제해도 작동함 -->
 <%
 //사용자 입력 정보 추출
 String id = request.getParameter("id");

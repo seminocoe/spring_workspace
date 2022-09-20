@@ -1,9 +1,0 @@
-package com.global.biz.board;
-
-public class BoardServiceClient {
-
-	public static void main(String[] args) {
-
-	}
-
-}

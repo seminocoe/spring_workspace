@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="polymorphism.TVUser"/>
-<fullyQualifiedTypeName name="polymorphism.BeanFactory"/>
-<fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
-<fullyQualifiedTypeName name="org.springframework.context.support.GenericApplicationContext"/>
-<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
-<fullyQualifiedTypeName name="com.sun.scenario.effect.impl.sw.sse.SSEBlend_ADDPeer"/>
-<fullyQualifiedTypeName name="polymorphism.SonySpeaker"/>
-<fullyQualifiedTypeName name="polymorphism.Speaker"/>
-<fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
-<fullyQualifiedTypeName name="com.global.ioc.injection.CollectionBean"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.util.AbstractMap"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="java.util.Properties"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
 <fullyQualifiedTypeName name="javax.annotation.Resource"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.lang.Class"/>
@@ -29,7 +13,6 @@
 <fullyQualifiedTypeName name="com.global.biz.common.Log4jAdvice"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="org.aopalliance.intercept.Joinpoint"/>
-<fullyQualifiedTypeName name="com.global.biz.user.UserVO"/>
 <fullyQualifiedTypeName name="org.aspectj.lang.JoinPoint"/>
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
@@ -53,11 +36,28 @@
 <fullyQualifiedTypeName name="javax.sql.DataSource"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
-<fullyQualifiedTypeName name="com.global.biz.board.BoardVO"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.TransactionDefinition"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.TransactionStatus"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.TransactionException"/>
+<fullyQualifiedTypeName name="com.global.biz.user.UserVO"/>
+<fullyQualifiedTypeName name="com.global.biz.user.impl.UserDAO"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.global.view.user.LoginController"/>
+<fullyQualifiedTypeName name="oracle.net.aso.h"/>
+<fullyQualifiedTypeName name="com.global.view.controller.HandlerMapping"/>
+<fullyQualifiedTypeName name="com.global.view.controller.ViewResolver"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.global.view.board.GetBoardListController"/>
+<fullyQualifiedTypeName name="com.global.view.board.GetBoardController"/>
+<fullyQualifiedTypeName name="com.global.view.board.InsertBoardController"/>
+<fullyQualifiedTypeName name="com.global.biz.board.BoardVO"/>
+<fullyQualifiedTypeName name="com.global.biz.board.impl.BoardDAO"/>
+<fullyQualifiedTypeName name="com.global.view.board.UpdateBoardController"/>
+<fullyQualifiedTypeName name="com.global.view.board.DeleteBoardController"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 </qualifiedTypeNameHistroy>

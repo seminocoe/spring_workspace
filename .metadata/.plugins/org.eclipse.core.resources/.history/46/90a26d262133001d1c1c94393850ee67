@@ -1,5 +1,0 @@
-package com.global.biz.common;
-
-public class JDBCUtil {
-
-}
