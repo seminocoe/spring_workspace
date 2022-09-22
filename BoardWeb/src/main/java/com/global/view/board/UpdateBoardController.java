@@ -3,14 +3,16 @@ package com.global.view.board;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
+
 import com.global.biz.board.BoardVO;
 import com.global.biz.board.impl.BoardDAO;
-import com.global.view.controller.Controller;
 
 public class UpdateBoardController implements Controller {
 
 	@Override
-	public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("글 수정 처리");
 		
 		String title = request.getParameter("title");
@@ -26,7 +28,12 @@ public class UpdateBoardController implements Controller {
 		BoardDAO boardDAO = new BoardDAO();
 		boardDAO.updateBoard(vo);
 
-		return "getBoardList.do";
+//		return "getBoardList.do";
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("redirect:getBoardList.do");
+		
+		return mav;
 	}
 
 }
