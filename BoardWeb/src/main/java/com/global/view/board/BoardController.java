@@ -3,46 +3,53 @@ package com.global.view.board;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.global.biz.board.BoardService;
 import com.global.biz.board.BoardVO;
 import com.global.biz.board.impl.BoardDAO;
 
 @Controller
+@SessionAttributes("board")
 public class BoardController {
 
+	@Autowired
+	private BoardService boardService;
+	
 	//글 등록
 	@RequestMapping(value = "/insertBoard.do")
-	public String insertBoard(BoardVO vo, BoardDAO boardDAO) {
+	public String insertBoard(BoardVO vo) {
 
 		System.out.println("글 등록 처리");
 		
-		boardDAO.insertBoard(vo);
+		boardService.insertBoard(vo);
 
 		return"getBoardList.do";
 	}
 	//글 수정
 	@RequestMapping("/updateBoard.do")
-	public String handleRequest(BoardVO vo, BoardDAO boardDAO) {
+	public String handleRequest(@ModelAttribute("board") BoardVO vo) {
 		System.out.println("글 수정 처리");
 		
-		boardDAO.updateBoard(vo);
+		boardService.updateBoard(vo);
 		
 		return "getBoardList.do";
 	}
 	//글 삭제
 	@RequestMapping("/deleteBoard.do")
-	public String deleteBoard(BoardVO vo, BoardDAO boardDAO) {
+	public String deleteBoard(BoardVO vo) {
 		
 		System.out.println("글 삭제 처리");
 		
-		boardDAO.deleteBoard(vo);
+		boardService.deleteBoard(vo);
 		
 		return "getBoardList.do";
 		
@@ -85,21 +92,21 @@ public class BoardController {
 	
 		//글 상세 조회
 		@RequestMapping("/getBoard.do")
-		public String getBoard(BoardVO vo, BoardDAO boardDAO, Model model) {
+		public String getBoard(BoardVO vo, Model model) {
 
 			System.out.println("글 상세 조회 처리");
 			
-			model.addAttribute("board", boardDAO.getBoard(vo));//Board정보를 저장
+			model.addAttribute("board", boardService.getBoard(vo));//Board정보를 저장
 			return "getBoard.jsp";//View 이름 리턴함
 		}
 		
 		//글 목록 조회
 		@RequestMapping("/getBoardList.do")
-		public String getBoardList(BoardVO vo, BoardDAO boardDAO, Model model) {
+		public String getBoardList(BoardVO vo, Model model) {
 			System.out.println("글 목록 조회 처리");
 			
 			//검색 결과와 화면 정보를 ModelAndView에 저장하여 리턴함
-			model.addAttribute("boardList", boardDAO.getBoardList(vo));//Model 정보를 저장
+			model.addAttribute("boardList", boardService.getBoardList(vo));//Model 정보를 저장
 			return "getBoardList.jsp";//View 이름 리턴
 		}
 		/*
