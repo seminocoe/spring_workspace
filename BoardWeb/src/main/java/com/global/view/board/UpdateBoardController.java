@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.global.biz.board.BoardVO;
 import com.global.biz.board.impl.BoardDAO;
 
-@Controller
+//@Controller
 public class UpdateBoardController {
 
-	@RequestMapping("/updateBoard.do")
+	//@RequestMapping("/updateBoard.do")
 	public String handleRequest(BoardVO vo, BoardDAO boardDAO) {
 		System.out.println("글 수정 처리");
 		

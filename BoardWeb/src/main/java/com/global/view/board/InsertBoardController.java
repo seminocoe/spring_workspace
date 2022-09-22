@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.global.biz.board.BoardVO;
 import com.global.biz.board.impl.BoardDAO;
 
-@Controller
+//@Controller
 public class InsertBoardController {
 
-	@RequestMapping(value = "/insertBoard.do")
+	//@RequestMapping(value = "/insertBoard.do")
 	public String insertBoard(BoardVO vo, BoardDAO boardDAO) {
 
 		System.out.println("글 등록 처리");

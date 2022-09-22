@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.global.biz.board.BoardVO;
 import com.global.biz.board.impl.BoardDAO;
 
-@Controller
+//@Controller
 public class DeleteBoardController {
 
-	@RequestMapping("/deleteBoard.do")
+	//@RequestMapping("/deleteBoard.do")
 	public String deleteBoard(BoardVO vo, BoardDAO boardDAO) {
 		
 		System.out.println("글 삭제 처리");

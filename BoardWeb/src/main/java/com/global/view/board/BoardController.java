@@ -1,0 +1,122 @@
+package com.global.view.board;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.global.biz.board.BoardVO;
+import com.global.biz.board.impl.BoardDAO;
+
+@Controller
+public class BoardController {
+
+	//글 등록
+	@RequestMapping(value = "/insertBoard.do")
+	public String insertBoard(BoardVO vo, BoardDAO boardDAO) {
+
+		System.out.println("글 등록 처리");
+		
+		boardDAO.insertBoard(vo);
+
+		return"getBoardList.do";
+	}
+	//글 수정
+	@RequestMapping("/updateBoard.do")
+	public String handleRequest(BoardVO vo, BoardDAO boardDAO) {
+		System.out.println("글 수정 처리");
+		
+		boardDAO.updateBoard(vo);
+		
+		return "getBoardList.do";
+	}
+	//글 삭제
+	@RequestMapping("/deleteBoard.do")
+	public String deleteBoard(BoardVO vo, BoardDAO boardDAO) {
+		
+		System.out.println("글 삭제 처리");
+		
+		boardDAO.deleteBoard(vo);
+		
+		return "getBoardList.do";
+		
+	}
+	/*
+	//글 상세 조회
+	@RequestMapping("/getBoard.do")
+	public ModelAndView getBoard(BoardVO vo, BoardDAO boardDAO, ModelAndView mav) {
+
+		System.out.println("글 상세 조회 처리");
+		
+		mav.addObject("board", boardDAO.getBoard(vo));//Board정보를 저장
+		mav.setViewName("getBoard.jsp");//View정보를 저장
+		
+		return mav;
+	}
+	
+	//글 목록 조회
+	@RequestMapping("/getBoardList.do")
+	public ModelAndView getBoardList(BoardVO vo, BoardDAO boardDAO, ModelAndView mav) {
+		
+		System.out.println("글 목록 조회 처리");
+		
+		//검색 결과와 화면 정보를 ModelAndView에 저장하여 리턴함
+		mav.addObject("boardList", boardDAO.getBoardList(vo));//Model 정보를 저장
+		mav.setViewName("getBoardList.jsp");//View 정보를 저장
+		
+		return mav;
+	}
+	*/
+		@ModelAttribute("conditionMap")
+		public Map<String, String>searchConditionMap(){
+			
+			Map<String, String> conditionMap = new HashMap<String, String>();
+			conditionMap.put("제목11", "TITLE");
+			conditionMap.put("내용11", "CONTENT");
+			
+			return conditionMap;
+		}
+	
+		//글 상세 조회
+		@RequestMapping("/getBoard.do")
+		public String getBoard(BoardVO vo, BoardDAO boardDAO, Model model) {
+
+			System.out.println("글 상세 조회 처리");
+			
+			model.addAttribute("board", boardDAO.getBoard(vo));//Board정보를 저장
+			return "getBoard.jsp";//View 이름 리턴함
+		}
+		
+		//글 목록 조회
+		@RequestMapping("/getBoardList.do")
+		public String getBoardList(BoardVO vo, BoardDAO boardDAO, Model model) {
+			System.out.println("글 목록 조회 처리");
+			
+			//검색 결과와 화면 정보를 ModelAndView에 저장하여 리턴함
+			model.addAttribute("boardList", boardDAO.getBoardList(vo));//Model 정보를 저장
+			return "getBoardList.jsp";//View 이름 리턴
+		}
+		/*
+		//글 목록 조회
+		@RequestMapping("/getBoardList.do")
+		public String getBoardList(BoardVO vo,
+				
+				@RequestParam(value = "searchCondition",defaultValue = "TITLE", required = false)String condition
+				,@RequestParam(value = "serchKeyword",defaultValue = "", required = false)String keyword
+				, BoardDAO boardDAO, Model model) {
+			System.out.println("글 목록 조회 처리");
+			System.out.println("검색 조건:"+condition);
+			System.out.println("검색 키워드:"+keyword);
+			
+			//검색 결과와 화면 정보를 ModelAndView에 저장하여 리턴함
+			model.addAttribute("boardList", boardDAO.getBoardList(vo));//Model 정보를 저장
+			return "getBoardList.jsp";//View 이름 리턴
+		}
+		*/
+}

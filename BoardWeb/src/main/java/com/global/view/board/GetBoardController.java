@@ -7,10 +7,10 @@ import org.springframework.web.servlet.ModelAndView;
 import com.global.biz.board.BoardVO;
 import com.global.biz.board.impl.BoardDAO;
 
-@Controller
+//@Controller
 public class GetBoardController {
 
-	@RequestMapping("/getBoard.do")
+	//@RequestMapping("/getBoard.do")
 	public ModelAndView getBoard(BoardVO vo, BoardDAO boardDAO, ModelAndView mav) {
 
 		System.out.println("글 상세 조회 처리");
