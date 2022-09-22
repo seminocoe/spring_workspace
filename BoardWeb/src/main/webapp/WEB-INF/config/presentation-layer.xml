@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
-	<!-- HandlerMapping 등록 -->
+ 	<context:component-scan base-package="com.global.view"></context:component-scan><!-- 어노테이션을 위해 써야함 네임스페이스에서도 context 체크 -->
+ 
+<!-- Spring MVC presentation-layer.xml 설정인데 어노테이션 하기전  -->
+	<!-- HandlerMapping 등록 --> <!-- 어노테이션 : @RequestMapping(value="/login.do" -->
+	<!-- 
 	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<property name="mappings">
 			<props>
@@ -17,7 +23,9 @@
 			</props>
 		</property>
 	</bean>
+	 -->
 	<!-- Controller 등록 -->
+	<!-- 
 	<bean id="login" class="com.global.view.user.LoginController"></bean>
 	<bean id="getBoardList" class="com.global.view.board.GetBoardListController"></bean>
 	<bean id="getBoard" class="com.global.view.board.GetBoardController"></bean>
@@ -25,11 +33,12 @@
 	<bean id="updateBoard" class="com.global.view.board.UpdateBoardController"></bean>
 	<bean id="deleteBoard" class="com.global.view.board.DeleteBoardController"></bean>
 	<bean id="logout" class="com.global.view.user.LogoutController"></bean>
-
+	 -->
 	<!-- ViewResolver 등록-->
+	<!-- 
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/board/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-	
+	 -->
 </beans>
