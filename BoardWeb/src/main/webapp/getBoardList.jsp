@@ -15,7 +15,7 @@
 ${userName }님 환영합니다...<a href="logout.do">Log_out</a>
 </h3>
 
-<form action="getBoardList.jsp" method="post">
+<form action="getBoardList.do" method="post">
 	<table border="1" cellpadding="0" cellspacing="0" width="700">
 		<tr>
 			<td align="right">
@@ -32,7 +32,7 @@ ${userName }님 환영합니다...<a href="logout.do">Log_out</a>
 		</tr>
 	</table>
 </form>
-
+<!-- 검색기능 종료 -->
 <table border="1" cellpadding="0" cellspacing="0" width="700">
 	<tr>
 		<th bgcolor="orange" width="100">번호</th>

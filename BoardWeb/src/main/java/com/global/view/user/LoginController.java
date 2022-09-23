@@ -28,6 +28,10 @@ public class LoginController {
 
 		System.out.println("로그인 인증 처리");
 		
+		if(vo.getId()==null || vo.getId().equals("")) {
+			throw new IllegalArgumentException("아이디는 반드시 입력하셔야 로그인을 할 수 있습니다.");
+		}
+		
 		UserVO user = userDAO.getUser(vo);
 		
 		if(user != null){
